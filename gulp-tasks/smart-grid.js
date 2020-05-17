@@ -4,12 +4,12 @@ import gulp from "gulp";
 const smartgrid = require("smart-grid");
 
 gulp.task("smart-grid", (cb) => {
-    smartgrid("./src/styles/vendor/import/", {
+    smartgrid("./src/styles/vendor/import", {
         outputStyle: "scss",
         filename: "_smart-grid",
         columns: 12, // number of grid columns
         offset: "1.875rem", // gutter width - 30px
-        mobileFirst: true,
+        mobileFirst: false,
         mixinNames: {
             container: "container"
         },

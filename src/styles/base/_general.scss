@@ -5,8 +5,41 @@ h1, h2, h3, h4, h5, h6, ul {
 
 .container {
     @include container();
-    @include sm(max-width, rem(510));
-    @include md(max-width, rem(690));
-    @include lg(max-width, rem(930));
-    @include xl(max-width, rem(1110));
+    //  Mobile-First
+    //  Не забыть перегенерировать smart-grid указав ключ "mobile-first"
+
+    //@include xs(max-width, rem(320));
+    //@include sm(max-width, rem(576));
+    //@include md(max-width, rem(768));
+    //@include lg(max-width, rem(992));
+    //@include xl(max-width, rem(1200));
+
+    // Привязка к smart-grid.scss
+
+    //@include xs(max-width, $break_xs);
+    //@include sm(max-width, $break_sm);
+    //@include md(max-width, $break_md);
+    //@include lg(max-width, $break_lg);
+    //@include xl(max-width, $break_xl);
+
+    //  Enr Mobile-First
+
+
+    //   Desktop-First
+
+    //@include xl(max-width, rem(1200));
+    //@include lg(max-width, rem(992));
+    //@include md(max-width, rem(768));
+    //@include sm(max-width, rem(576));
+    //@include xs(max-width, rem(320));
+
+    // Привязка к smart-grid.scss
+
+    @include xl(max-width, $break_xl);
+    @include lg(max-width, $break_lg);
+    @include md(max-width, $break_md);
+    @include sm(max-width, $break_sm);
+    @include xs(max-width, $break_xs);
+
+    //   end Desktop-First
 }
